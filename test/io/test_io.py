@@ -4,8 +4,8 @@ from io import IO
 
 __author__ = 'barryhennessy'
 
-class TestIO(TestCase):
 
+class TestIO(TestCase):
     # This assumes unit tests are being run from the project root directory
     valid_file = "test/io/valid_file.txt"
     invalid_file = "test/io/invalid_file.txt"

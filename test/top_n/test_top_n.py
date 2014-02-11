@@ -32,7 +32,6 @@ class TestTopN(TestCase):
         with self.assertRaises(TypeError):
             top = TopN({123})
 
-
     def test_get_top_n_returns_list(self):
         top = TopN(2)
         top.push(1)

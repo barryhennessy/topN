@@ -1,10 +1,10 @@
 __author__ = 'barryhennessy'
 
+
 class IO(object):
     """Handles IO for TopN."""
 
     def read(self, path):
-
         """Reads integers from the path given with a generator
 
         :param path: The path to the file to be read
