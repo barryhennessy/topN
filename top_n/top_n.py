@@ -13,7 +13,7 @@ class TopN(object):
                 "The number of items to track must be greater than 0"
             )
 
-        self._max_size = max_to_track
+        self._max_size = int(max_to_track)
         self._heap = []
 
     def push(self, new_int):

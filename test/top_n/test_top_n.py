@@ -16,6 +16,23 @@ class TestTopN(TestCase):
         with self.assertRaises(ValueError):
             top = TopN(0)
 
+    def test_string_rep_int_operates_correctly(self):
+        top = TopN("2")
+
+        top.push(1)
+        top.push(2)
+        top.push(3)
+
+        top_n = top.get_top_n()
+
+        self.assertListEqual(top_n, [3, 2])
+        self.assertListEqual(top_n, [3, 2])
+
+    def test_invalid_int_raises_type_error(self):
+        with self.assertRaises(TypeError):
+            top = TopN({123})
+
+
     def test_get_top_n_returns_list(self):
         top = TopN(2)
         top.push(1)
