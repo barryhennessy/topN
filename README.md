@@ -12,7 +12,7 @@ This ensures that the queue always contains the N highest in heap sorted order.
 
 #### Time
 If N is the number of numbers to track and M is the amount of numbers in the file:
-The complexity of pushing into a priority queue is `log(M)` and sorting the list is (`M*log(M)`)[https://wiki.python.org/moin/TimeComplexity] however the number of pushes
+The complexity of pushing into a priority queue is `log(M)` and sorting the list is `(M*log(M))[https://wiki.python.org/moin/TimeComplexity]` however the number of pushes
 we will have to make is N. Assuming that N is much larger than M, i.e. the top 1000 numbers in a 2GB file the complexity
 becomes `~N*log(M) + M*log(M)` which if you consider the relative size of N is approximately `N*log(M)`.
 The bottom line is that the overwhelming factor in the time this will take is the size of the file you're scanning.
