@@ -25,6 +25,6 @@ in which case you will store the entire file in memory. Thankfully this isn't to
 
 ### Improvements
 Since scanning through the file is the largest part of the time complexity it makes sense to optimise there. It may
-be possibly to parralise this process by splitting the file and maintaining multiple topN lists. This would require
+be possibly to parallelise this process by splitting the file and maintaining multiple topN lists. This would require
 an additional merge of the lists at the end, but if you could shave significant amount of time off scanning N you should
 gain time overall.
